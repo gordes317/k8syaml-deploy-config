@@ -1,10 +1,2 @@
-- op: replace
-  path: /spec/template/spec/containers/0/env
-  value:
-    - name: PROCESS
-      valueFrom:
-        configMapKeyRef:
-          key: PROCESS_CE_WK_DFLT
-          name: srv-core-dev
-          optional: false
+
  
