@@ -35,7 +35,7 @@ spec:
     metadata:
       labels:
         service: dev-django-demo1-rollouts
-      name: dev-django-demo1-rollouts
+      #name: dev-django-demo1-rollouts
     spec:
       containers:
       - name: rollouts-demo
