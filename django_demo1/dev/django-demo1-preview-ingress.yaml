@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    ksyun.com/describe: ""
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+  labels:
+    ksyun.com/kce-component-generated: ingress-nginx
+  name: dev-django-demo1-ingress-preview
+  namespace: srv-core-st
+spec:
+  ingressClassName: ingress-nginx
+  rules:
+  - host: st-pre-flower-api.hannto.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: dev-django-demo1-svc-preview
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - hannto.com
+    secretName: hannto-com
+status:
+  loadBalancer:
+    ingress:
+    - ip: 120.92.210.74

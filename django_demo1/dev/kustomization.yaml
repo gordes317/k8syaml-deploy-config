@@ -1,0 +1,12 @@
+resources:
+- dev-django-demo1-rollout.yaml
+- django-demo-svc.yaml
+- django-demo1-preview-ingress.yaml
+- django-demo1-stable-ingress.yaml
+patchesJson6902:
+- target:
+    group: argoproj.io
+    version: v1alpha1
+    kind: Rollout
+    name: dev-django-demo1-rollouts
+  path: patch.yaml

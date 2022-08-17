@@ -1,0 +1,15 @@
+- op: replace
+  path: /spec/template/spec/containers/0/env
+  value:
+    - name: ADMIN_SITE_WRITE_WHITELIST
+      valueFrom:
+        configMapKeyRef:
+          key: ADMIN_SITE_WRITE_WHITELIST
+          name: srv-core-dev
+          optional: false
+    - name: AIOT_ACCESS_KEY_ID
+      valueFrom:
+        configMapKeyRef:
+          key: AIOT_ACCESS_KEY_ID
+          name: srv-core-dev
+          optional: false

@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  ADDR: shanghai
+  ADMIN_SITE_WRITE_WHITELIST: zhiqun.han@hannto.com,junliang.chen@hannto.com
+  AIOT_ACCESS_KEY_ID: LTAI4GKTPwsy2e8njCBsqHex
+  NAME: HUANGJUN
+kind: ConfigMap
+metadata:
+  name: django_demo_cm
